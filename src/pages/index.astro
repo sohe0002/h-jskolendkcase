@@ -13,22 +13,33 @@ import stemning5 from "../assets/images/stemning5.jpg";
 import stemning6 from "../assets/images/stemning6.jpg";
 import stemning7 from "../assets/images/stemning7.jpg";
 import stemning8 from "../assets/images/stemning8.jpg";
+import stemning9 from "../assets/images/stemning9.png";
+import stemning10 from "../assets/images/stemning10.png";
+import stemning11 from "../assets/images/stemning11.png";
+import stemning12 from "../assets/images/stemning12.png";
 import infobillede from "../assets/images/infobillede.jpg";
+import ligeværd from "../assets/images/ligeværd.jpg";
+import integritet from "../assets/images/integritet.jpg";
+import mod from "../assets/images/mod.jpg";
+import fællesskab from "../assets/images/fællesskab.jpg";
+import trustpilot1 from "../assets/images/trustpilot1.jpg";
+import trustpilot2 from "../assets/images/trustpilot2.jpg";
 ---
 
 <MainLayout title="Titel">
-  <article class="px-24">
-    C
+  <article>
     <section id="hero">
-      <h1>HØJSKOLE I UDLANDET</h1>
-      <h2>EVENTYRLIGE HØJSKOLEOPHOLD I UDLANDET FOR UNGE</h2>
+      <h1 class="font-acme text-h1_mobil text-blaa-300">HØJSKOLE I UDLANDET</h1>
+      <h2 class="font-inter text-h2_mobil font-bold text-blaa-300">
+        EVENTYRLIGE HØJSKOLEOPHOLD I UDLANDET FOR UNGE
+      </h2>
     </section>
 
-    <section>
-      <h2 class="py-10">
+    <section class="px-lg">
+      <h2 class="font-inter text-h2_mobil font-bold">
         SKAB MINDER FOR LIVET - <br /> KOM PÅ HØJSKOLEEVENTYR!
       </h2>
-      <p class="pb-10">
+      <p class="font-inter text-p_mobil">
         Tag på højskole i udlandet og oplev verden på en helt ny måde! Hos
         HÖJSKOLENDK kombinerer vi rejseeventyr, fællesskab og spændende
         undervisning for unge mellem 18-30 år. Forestil dig fællesskab, nye
@@ -38,11 +49,15 @@ import infobillede from "../assets/images/infobillede.jpg";
         Bliv underholdt, udvikl dig og skab minder, der varer for evigt. Vi
         glæder os til at tage dig med på dit livs rejse!
       </p>
-      <Image src={solmobile} class="mx-auto pb-20" alt="billede af sol" />
+      <Image src={solmobile} class="mx-auto pb-xl pt-s" alt="billede af sol" />
     </section>
 
-    <section>
-      <h2 class="grid justify-items-center pb-8">VORES REJSER</h2>
+    <section class="pb-lg px-lg" id="rejser">
+      <h2
+        class="grid justify-items-center pb-8 font-inter text-h2_mobil font-bold"
+      >
+        VORES REJSER
+      </h2>
       <div class="grid grid-cols-2">
         <Card />
         <Card />
@@ -55,17 +70,23 @@ import infobillede from "../assets/images/infobillede.jpg";
       </div>
     </section>
 
-    <section>
-      <h2>SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPRØGSMÅL</h2>
+    <section class="px-lg">
+      <h2 class="font-inter text-h2_mobil font-bold">
+        SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPRØGSMÅL
+      </h2>
     </section>
 
-    <section>
-      <p>HöjskolenDK giver en tryg og sikker rejseform.</p>
-      <p>
-        Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk
-        rejse og venner for livet
+    <section class="px-lg">
+      <p class="font-inter text-h4_mobil italic">
+        "HöjskolenDK giver en tryg og sikker rejseform"
       </p>
-      <p>Helt igennem den bedste beslutning jeg nogensinde har taget</p>
+      <p class="font-inter text-h4_mobil italic">
+        "Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk
+        rejse og venner for livet"
+      </p>
+      <p class="font-inter text-h4_mobil italic">
+        "Helt igennem den bedste beslutning jeg nogensinde har taget"
+      </p>
 
       <div class="grid grid-cols-2">
         <Image src={stemning1} class="" alt="billede af stemning" />
@@ -81,17 +102,21 @@ import infobillede from "../assets/images/infobillede.jpg";
         <Image src={stemning8} class="" alt="billede af stemning" />
       </div>
 
-      <p>HöjskolenDK har givet mig så meget mere end blot en rejse</p>
-      <p>
-        Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de
-        dejligste mennesker, og gode rejseledere.
+      <p class="font-inter text-h4_mobil italic">
+        "HöjskolenDK har givet mig så meget mere end blot en rejse"
+      </p>
+      <p class="font-inter text-h4_mobil italic">
+        "Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de
+        dejligste mennesker, og gode rejseledere.""
       </p>
     </section>
 
-    <section>
-      <Image src={infobillede} class="" alt="billede af stemning" />
-      <h2>INFOMØDER</h2>
-      <p>
+    <section class="bg-blaa-200 px-lg py-m">
+      <Image src={infobillede} class="mx-auto" alt="billede af stemning" />
+      <h2 class="font-inter text-h2_mobil text-blaa-900 font-bold pt-m">
+        INFOMØDER
+      </h2>
+      <p class="font-inter text-p_mobil">
         Drømmer du om et rejseeventyr fyldt med adventure, betagende
         naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk højskolestemningen
         til et af vores hyggelige infomøder i København eller Aarhus – eller deltag
@@ -99,33 +124,233 @@ import infobillede from "../assets/images/infobillede.jpg";
       </p>
 
       <div>
-        <h4>KØBENHAVN</h4>
+        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
+          KØBENHAVN
+        </h4>
 
-        <p class="italic">16. Januar 2025 - kl. 17-19</p>
+        <p class="font-inter text-p_mobil italic">
+          16. Januar 2025 - kl. 17-19
+        </p>
       </div>
 
       <div>
-        <h4>ÅRHUS</h4>
+        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
+          ÅRHUS
+        </h4>
 
-        <p class="italic">14. Januar 2025 - kl. 17-19</p>
+        <p class="font-inter text-p_mobil italic">
+          14. Januar 2025 - kl. 17-19
+        </p>
       </div>
 
       <div>
-        <h4>ONLINE INFORMØDE</h4>
+        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
+          ONLINE INFORMØDE
+        </h4>
 
-        <p class="italic">13. November 2024 - kl. 17-19</p>
-        <p class="italic">21. Januar 2025 - kl. 17-19</p>
+        <p class="font-inter text-p_mobil italic">
+          13. November 2024 - kl. 17-19
+        </p>
+        <p class="font-inter text-p_mobil italic">
+          21. Januar 2025 - kl. 17-19
+        </p>
       </div>
 
       knap
     </section>
 
-    <section></section>
+    <section class="px-lg py-lg">
+      <div class="grid grid-cols-2">
+        <div>
+          <Image src={ligeværd} class="" alt="billede af stemning" />
+          <h3 class="font-inter font-bold text-h3_mobil text-gron-800">
+            LIGEVÆRD & RESPEKT
+          </h3>
+        </div>
+        <div>
+          <Image src={integritet} class="" alt="billede af stemning" />
+          <h3 class="font-inter font-bold text-h3_mobil text-gron-800">
+            INTEGRITET & ÆRLIGHED
+          </h3>
+        </div>
+        <div>
+          <Image src={mod} class="" alt="billede af stemning" />
+          <h3 class="font-inter font-bold text-h3_mobil text-gron-800">
+            MOD & RUMMELIGHED
+          </h3>
+        </div>
+        <div>
+          <Image src={fællesskab} class="" alt="billede af stemning" />
+          <h3 class="font-inter font-bold text-h3_mobil text-gron-800">
+            FÆLLESSKAB & SJOV
+          </h3>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
+    <section class="p-lg bg-orange-300">
+      <h2 class="font-inter font-bold text-gron-950 text-h2_mobil pb-s">
+        REJSE HØJSKOLE
+      </h2>
+      <p class="font-inter text-p_mobil pb-lg">
+        Tag på højskole i udlandet og oplev et unikt eventyr med stærkt
+        fællesskab og spændende rejseoplevelser. <br /><br />
+
+        Brug dit sabbatår på frivilligt arbejde, adventure, sprog og personlig
+        udvikling, som giver dig øget selvtillid og selvindsigt. <br /><br />
+
+        Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser med
+        noget på hjerte.” Vi fokuserer på at flytte dine grænser og hjælpe dig
+        med at finde afklaring om din fremtid. <br /><br />
+
+        Tag på højskole i udlandet, hvis du ønsker et eventyr, der inspirerer og
+        styrker dig.
+      </p>
+
+      <h2 class="font-inter font-bold text-gron-950 text-h2_mobil pb-s">
+        HØJSKOLE I UDLANDET
+      </h2>
+      <p class="font-inter text-p_mobil pb-s">
+        Når du rejser med HÖJSKOLENDK, får du:
+      </p>
+
+      <ul class="font-inter text-p_mobil pb-s">
+        <li>Et stærkt fællesskab og masser af naturoplevelser</li>
+        <li>Nye, spændende kulturer og adventure</li>
+        <li>Øget selvtillid og personlig udvikling</li>
+        <li>Passionerede rejseledere og undervisere</li>
+        <li>Et unikt, trygt rejseeventyr</li>
+      </ul>
+
+      <p class="font-inter text-p_mobil pb-s">
+        Vores kombination af højskole, rejseeventyr og spændende undervisning
+        hjælper dig med at finde ud af, hvad der er meningsfuldt for dig – så du
+        kan forfølge dine drømme.
+      </p>
+
+      <p class="font-inter font-bold text-p_mobil">
+        Opdag dit livs eventyr med HÖJSKOLENDK!
+      </p>
+    </section>
+
+    <section class="px-lg pb-lg">
+      <h2
+        class="font-inter font-bold text-h2_mobil grid justify-items-center pt-xl pb-s"
       >
-    </p>
+        TRUSTPILOT
+      </h2>
+
+      <Image
+        src={trustpilot1}
+        class="mx-auto pb-m"
+        alt="billede af trustpilotanmeldelse"
+      />
+      <Image
+        src={trustpilot2}
+        class="mx-auto"
+        alt="billede af trustpilotanmeldelse"
+      />
+    </section>
+
+    <section class="bg-gron-600 px-lg pb-lg">
+      <h2 class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s">
+        HØJSKOLE I UDLANDET FOR UNGE
+      </h2>
+      <p class="font-inter text-p_mobil">
+        Drømmer du om et eventyr i udlandet? Med HÖJSKOLENDK får du
+        uforglemmelige oplevelser, fællesskab og meningsfuld læring. Et
+        højskoleophold i udlandet giver dig nye venskaber og oplevelser for
+        livet. <br /><br />
+
+        Vælg mellem rejser til Bali, Hawaii, Maldiverne, Australien, New York,
+        Tokyo, Rio, Indien, Bolivia, Japan, Costa Rica og mange andre spændende
+        steder. Oplev natur, storbyer, kultur og adrenalinfyldte eventyr sammen
+        med andre unge og danske rejseledere. <br /><br />
+
+        Højskolerejsen er ikke kun et eventyr i verden, men også en rejse mod
+        personlig udvikling, selvtillid og selvværd.
+      </p>
+    </section>
+
+    <section class="px-lg pb-lg">
+      <h2 class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s">
+        EN REJSEHØJSKOLE FYLDT MED OPLEVELSER
+      </h2>
+      <p class="font-inter text-p_mobil pb-s">
+        Vi tilbyder spændende ophold, hvor du besøger flere lande og deltager i
+        inspirerende undervisning og aktiviteter.
+      </p>
+
+      <p class="font-inter text-p_mobil font-bold">TEAMBUILDING:</p>
+      <p class="font-inter text-p_mobil pb-s">
+        Rejs med andre unge og udvikl dine samarbejdsevner, samtidig med at du
+        får erfaring, der styrker både studie og karriere.
+      </p>
+
+      <p class="font-inter text-p_mobil font-bold">
+        FRIVILLIGT ARBEJDE & KULTURFORSTÅELSE:
+      </p>
+      <p class="font-inter text-p_mobil pb-s">
+        Involver dig i frivilligt arbejde, få indsigt i lokale kulturer og oplev
+        verden på en ny måde.
+      </p>
+
+      <p class="font-inter text-p_mobil font-bold">FRIUGER:</p>
+      <p class="font-inter text-p_mobil pb-s">
+        Udforsk landet på egen hånd i de indlagte friuger – enten med små
+        grupper eller hele holdet.
+      </p>
+
+      <p class="font-inter text-p_mobil font-bold">
+        SPÆNDENDE KULTUROPLEVELSER:
+      </p>
+      <p class="font-inter text-p_mobil pb-s">
+        Oplev kulturer tæt på, fra Hindu-templer i Indien til Maya-ruiner i
+        Mexico, og få unik indsigt i de lokale traditioner.
+      </p>
+
+      <p class="font-inter text-p_mobil font-bold">VILDE NATUROPLEVELSER:</p>
+      <p class="font-inter text-p_mobil">
+        Snorkel i Caribien, river raft i Thailand eller vandr i Himalaya – vores
+        ophold byder på eventyrlige naturoplevelser, du aldrig vil glemme.
+      </p>
+
+      <Image src={solmobile} class="mx-auto pb-xl pt-s" alt="billede af sol" />
+    </section>
+
+    <section class="px-lg bg-blaa-500 pb-lg">
+      <div>
+        <Image
+          src={stemning9}
+          class="mx-auto"
+          alt="billede af stemning col-span-2"
+        />
+      </div>
+      <div
+        class="grid grid-cols-2 justify-items-center justify-center items-center pb-lg"
+      >
+        <Image src={stemning10} class="row-span-1" alt="billede af stemning" />
+        <Image src={stemning11} class="row-span-2" alt="billede af stemning" />
+        <Image src={stemning12} class="row-span-1" alt="billede af stemning" />
+      </div>
+
+      <p class="font-inter text-p_mobil">
+        HÖJSKOLENDK tilbyder rejser året rundt – både korte sommerophold på ca.
+        5 uger og længere ophold på 2-3 måneder. <br /><br /> Sommeropholdet er perfekt
+        til dig, der vil opleve flere lande og kulturer på kort tid, mens ophold
+        i løbet af året er ideelt for sabbatårselever, der ønsker personlig udvikling
+        og et eventyr.
+      </p>
+
+      <p class="font-inter text-p_mobil">
+        Uanset hvilken rejse du vælger, får du en uforglemmelig oplevelse med
+        andre unge og masser af læring.
+      </p>
+
+      <p class="font-inter text-p_mobil text-center pt-lg">
+        Uanset hvilken rejse du vælger, får du en uforglemmelig oplevelse med
+        andre unge og masser af læring.
+      </p>
+    </section>
   </article>
 </MainLayout>
