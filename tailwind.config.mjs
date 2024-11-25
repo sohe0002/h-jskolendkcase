@@ -69,9 +69,24 @@ colors: {
         },
 
          /* Tilføj din egen spacing nedenfor */
-        // spacing: {
-        //     'm': '40px',
-        // },
+spacing: {
+    'xxs': '8px',
+    'xs': '16px',
+    's': '24px',
+    'sm': '32px',
+    'm': '40px',
+    'ml': '48px',
+    'lg': '64px',
+    'xl': '80px',
+    '2xl': '96px',
+    '3xl': '112px',
+    '4xl': '128px',
+    '5xl': '112px',
+    '6xl': '128px',
+    '7xl': '112px',
+    '8xl': '128px',
+    '9xl': '424px',
+},
 
         /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
 fontFamily: {
