@@ -4,10 +4,21 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import solmobile from "../assets/images/sol_mobile.svg";
+import Card from "../components/Card.astro";
+import stemning1 from "../assets/images/stemning1.jpg";
+import stemning2 from "../assets/images/stemning2.jpg";
+import stemning3 from "../assets/images/stemning3.jpg";
+import stemning4 from "../assets/images/stemning4.jpg";
+import stemning5 from "../assets/images/stemning5.jpg";
+import stemning6 from "../assets/images/stemning6.jpg";
+import stemning7 from "../assets/images/stemning7.jpg";
+import stemning8 from "../assets/images/stemning8.jpg";
+import infobillede from "../assets/images/infobillede.jpg";
 ---
 
 <MainLayout title="Titel">
   <article class="px-24">
+    C
     <section id="hero">
       <h1>HØJSKOLE I UDLANDET</h1>
       <h2>EVENTYRLIGE HØJSKOLEOPHOLD I UDLANDET FOR UNGE</h2>
@@ -27,8 +38,89 @@ import solmobile from "../assets/images/sol_mobile.svg";
         Bliv underholdt, udvikl dig og skab minder, der varer for evigt. Vi
         glæder os til at tage dig med på dit livs rejse!
       </p>
-      <Image src={solmobile} alt="billede af sol" />
+      <Image src={solmobile} class="mx-auto pb-20" alt="billede af sol" />
     </section>
+
+    <section>
+      <h2 class="grid justify-items-center pb-8">VORES REJSER</h2>
+      <div class="grid grid-cols-2">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
+    </section>
+
+    <section>
+      <h2>SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPRØGSMÅL</h2>
+    </section>
+
+    <section>
+      <p>HöjskolenDK giver en tryg og sikker rejseform.</p>
+      <p>
+        Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk
+        rejse og venner for livet
+      </p>
+      <p>Helt igennem den bedste beslutning jeg nogensinde har taget</p>
+
+      <div class="grid grid-cols-2">
+        <Image src={stemning1} class="" alt="billede af stemning" />
+        <Image src={stemning2} class="" alt="billede af stemning" />
+        <Image src={stemning3} class="" alt="billede af stemning" />
+        <Image src={stemning4} class="" alt="billede af stemning" />
+      </div>
+
+      <div class="grid grid-cols-2">
+        <Image src={stemning5} class="" alt="billede af stemning" />
+        <Image src={stemning6} class="" alt="billede af stemning" />
+        <Image src={stemning7} class="" alt="billede af stemning" />
+        <Image src={stemning8} class="" alt="billede af stemning" />
+      </div>
+
+      <p>HöjskolenDK har givet mig så meget mere end blot en rejse</p>
+      <p>
+        Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de
+        dejligste mennesker, og gode rejseledere.
+      </p>
+    </section>
+
+    <section>
+      <Image src={infobillede} class="" alt="billede af stemning" />
+      <h2>INFOMØDER</h2>
+      <p>
+        Drømmer du om et rejseeventyr fyldt med adventure, betagende
+        naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk højskolestemningen
+        til et af vores hyggelige infomøder i København eller Aarhus – eller deltag
+        hjemmefra på et inspirerende online møde.
+      </p>
+
+      <div>
+        <h4>KØBENHAVN</h4>
+
+        <p class="italic">16. Januar 2025 - kl. 17-19</p>
+      </div>
+
+      <div>
+        <h4>ÅRHUS</h4>
+
+        <p class="italic">14. Januar 2025 - kl. 17-19</p>
+      </div>
+
+      <div>
+        <h4>ONLINE INFORMØDE</h4>
+
+        <p class="italic">13. November 2024 - kl. 17-19</p>
+        <p class="italic">21. Januar 2025 - kl. 17-19</p>
+      </div>
+
+      knap
+    </section>
+
+    <section></section>
 
     <p>
       Link til <Link href="https://www.kea.dk" target="_blank"
