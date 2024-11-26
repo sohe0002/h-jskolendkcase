@@ -4,6 +4,7 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import solmobile from "../assets/images/sol_mobile.svg";
+import sol from "../assets/images/sol.svg";
 import Card from "../components/Card.astro";
 import stemning1 from "../assets/images/stemning1.jpg";
 import stemning2 from "../assets/images/stemning2.jpg";
@@ -28,6 +29,7 @@ import trustpilot2 from "../assets/images/trustpilot2.jpg";
 import trustpilot3 from "../assets/images/trustpilot3.jpg";
 import trustpilot4 from "../assets/images/trustpilot4.jpg";
 import palme from "../assets/images/palme.png";
+import palmer from "../assets/images/palmer.jpg";
 ---
 
 <MainLayout title="Titel">
@@ -67,8 +69,8 @@ import palme from "../assets/images/palme.png";
         </p>
       </div>
       <Image
-        src={solmobile}
-        class="mx-auto pb-xl pt-s lg:w-lg"
+        src={sol}
+        class="mx-auto w-xl pt-lg pb-xl lg:w-4xl"
         alt="billede af sol"
       />
     </section>
@@ -397,73 +399,99 @@ import palme from "../assets/images/palme.png";
       </div>
     </section>
 
-    <section class="bg-gron-600 px-lg pb-lg">
-      <h2 class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s">
-        HØJSKOLE I UDLANDET FOR UNGE
-      </h2>
-      <p class="font-inter text-p_mobil">
-        Drømmer du om et eventyr i udlandet? Med HÖJSKOLENDK får du
-        uforglemmelige oplevelser, fællesskab og meningsfuld læring. Et
-        højskoleophold i udlandet giver dig nye venskaber og oplevelser for
-        livet. <br /><br />
+    <section class="bg-gron-600 lg:grid lg:grid-cols-2">
+      <div>
+        <h2
+          class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s lg:grid lg:text-h2_desk px-lg"
+        >
+          HØJSKOLE I UDLANDET FOR UNGE
+        </h2>
+        <p class="font-inter text-p_mobil lg:text-p_desk px-lg">
+          Drømmer du om et eventyr i udlandet? Med HÖJSKOLENDK får du
+          uforglemmelige oplevelser, fællesskab og meningsfuld læring. Et
+          højskoleophold i udlandet giver dig nye venskaber og oplevelser for
+          livet. <br /><br />
 
-        Vælg mellem rejser til Bali, Hawaii, Maldiverne, Australien, New York,
-        Tokyo, Rio, Indien, Bolivia, Japan, Costa Rica og mange andre spændende
-        steder. Oplev natur, storbyer, kultur og adrenalinfyldte eventyr sammen
-        med andre unge og danske rejseledere. <br /><br />
+          Vælg mellem rejser til Bali, Hawaii, Maldiverne, Australien, New York,
+          Tokyo, Rio, Indien, Bolivia, Japan, Costa Rica og mange andre
+          spændende steder. Oplev natur, storbyer, kultur og adrenalinfyldte
+          eventyr sammen med andre unge og danske rejseledere. <br /><br />
 
-        Højskolerejsen er ikke kun et eventyr i verden, men også en rejse mod
-        personlig udvikling, selvtillid og selvværd.
-      </p>
+          Højskolerejsen er ikke kun et eventyr i verden, men også en rejse mod
+          personlig udvikling, selvtillid og selvværd.
+        </p>
+      </div>
+      <Image src={palmer} class="w-full" alt="billede af palmelogoet" />
     </section>
 
-    <section class="px-lg pb-lg">
-      <h2 class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s">
+    <section class="px-2xl pb-lg">
+      <h2
+        class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s lg:text-h2_desk"
+      >
         EN REJSEHØJSKOLE FYLDT MED OPLEVELSER
       </h2>
-      <p class="font-inter text-p_mobil pb-s">
+      <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
         Vi tilbyder spændende ophold, hvor du besøger flere lande og deltager i
         inspirerende undervisning og aktiviteter.
       </p>
+      <div class="lg:grid lg:grid-cols-2 gap-8xl">
+        <div>
+          <p class="font-inter text-p_mobil font-bold lg:text-p_desk">
+            TEAMBUILDING:
+          </p>
+          <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
+            Rejs med andre unge og udvikl dine samarbejdsevner, samtidig med at
+            du får erfaring, der styrker både studie og karriere.
+          </p>
 
-      <p class="font-inter text-p_mobil font-bold">TEAMBUILDING:</p>
-      <p class="font-inter text-p_mobil pb-s">
-        Rejs med andre unge og udvikl dine samarbejdsevner, samtidig med at du
-        får erfaring, der styrker både studie og karriere.
-      </p>
+          <p class="font-inter text-p_mobil font-bold lg:text-p_desk">
+            FRIVILLIGT ARBEJDE & KULTURFORSTÅELSE:
+          </p>
+          <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
+            Involver dig i frivilligt arbejde, få indsigt i lokale kulturer og
+            oplev verden på en ny måde.
+          </p>
 
-      <p class="font-inter text-p_mobil font-bold">
-        FRIVILLIGT ARBEJDE & KULTURFORSTÅELSE:
-      </p>
-      <p class="font-inter text-p_mobil pb-s">
-        Involver dig i frivilligt arbejde, få indsigt i lokale kulturer og oplev
-        verden på en ny måde.
-      </p>
+          <p class="font-inter text-p_mobil font-bold lg:text-p_desk">
+            FRIUGER:
+          </p>
+          <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
+            Udforsk landet på egen hånd i de indlagte friuger – enten med små
+            grupper eller hele holdet.
+          </p>
+        </div>
+        <div>
+          <p class="font-inter text-p_mobil font-bold lg:text-p_desk">
+            SPÆNDENDE KULTUROPLEVELSER:
+          </p>
+          <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
+            Oplev kulturer tæt på, fra Hindu-templer i Indien til Maya-ruiner i
+            Mexico, og få unik indsigt i de lokale traditioner.
+          </p>
 
-      <p class="font-inter text-p_mobil font-bold">FRIUGER:</p>
-      <p class="font-inter text-p_mobil pb-s">
-        Udforsk landet på egen hånd i de indlagte friuger – enten med små
-        grupper eller hele holdet.
-      </p>
-
-      <p class="font-inter text-p_mobil font-bold">
-        SPÆNDENDE KULTUROPLEVELSER:
-      </p>
-      <p class="font-inter text-p_mobil pb-s">
-        Oplev kulturer tæt på, fra Hindu-templer i Indien til Maya-ruiner i
-        Mexico, og få unik indsigt i de lokale traditioner.
-      </p>
-
-      <p class="font-inter text-p_mobil font-bold">VILDE NATUROPLEVELSER:</p>
-      <p class="font-inter text-p_mobil">
-        Snorkel i Caribien, river raft i Thailand eller vandr i Himalaya – vores
-        ophold byder på eventyrlige naturoplevelser, du aldrig vil glemme.
-      </p>
-
-      <Image src={solmobile} class="mx-auto pb-xl pt-s" alt="billede af sol" />
+          <p class="font-inter text-p_mobil font-bold lg:text-p_desk">
+            VILDE NATUROPLEVELSER:
+          </p>
+          <p class="font-inter text-p_mobil lg:text-p_desk">
+            Snorkel i Caribien, river raft i Thailand eller vandr i Himalaya –
+            vores ophold byder på eventyrlige naturoplevelser, du aldrig vil
+            glemme.
+          </p>
+        </div>
+      </div>
+      <Image
+        src={sol}
+        class="mx-auto w-xl pt-lg lg:w-4xl"
+        alt="billede af sol"
+      />
     </section>
 
     <section class="px-lg bg-blaa-500 pb-lg">
+      <h2
+        class="font-inter font-bold text-h2_mobil text-brun-950 pt-lg pb-s lg:text-h2_desk"
+      >
+        UFORGLEMMELIGT HØJSKOLE OPHOLD I UDLANDET
+      </h2>
       <div>
         <Image
           src={stemning9}
@@ -479,7 +507,7 @@ import palme from "../assets/images/palme.png";
         <Image src={stemning12} class="row-span-1" alt="billede af stemning" />
       </div>
 
-      <p class="font-inter text-p_mobil">
+      <p class="font-inter text-p_mobil lg:text-p_desk">
         HÖJSKOLENDK tilbyder rejser året rundt – både korte sommerophold på ca.
         5 uger og længere ophold på 2-3 måneder. <br /><br /> Sommeropholdet er perfekt
         til dig, der vil opleve flere lande og kulturer på kort tid, mens ophold
@@ -487,12 +515,12 @@ import palme from "../assets/images/palme.png";
         og et eventyr.
       </p>
 
-      <p class="font-inter text-p_mobil">
+      <p class="font-inter text-p_mobil lg:text-p_desk">
         Uanset hvilken rejse du vælger, får du en uforglemmelig oplevelse med
         andre unge og masser af læring.
       </p>
 
-      <p class="font-inter text-p_mobil text-center pt-lg">
+      <p class="font-inter text-p_mobil text-center pt-lg lg:text-p_desk">
         Uanset hvilken rejse du vælger, får du en uforglemmelig oplevelse med
         andre unge og masser af læring.
       </p>
