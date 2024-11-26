@@ -1,5 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const { href = "#", target = "_self" } = Astro.props;
+import "motion";
+
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -153,58 +157,51 @@ import palmer from "../assets/images/palmer.jpg";
       </div>
     </section>
 
-    <section class="max-w-4xl mx-auto bg-[#F7F6E7] p-6 rounded-lg">
-      <h2 class="text-xl font-bold mb-6 text-center">
-        SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPØRGSMÅL
-      </h2>
-      <div class="space-y-4">
-        <!-- Spørgsmål 1 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer1')"
-          >
-            <span>1. Hvad koster et højskoleophold?</span>
-            <span id="icon1" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer1" class="hidden pl-4 pb-3 text-gray-700">
-            Priserne på opholdene varierer alt efter hvilken rejse du vælger og
-            hvornår du vil afsted. Tjek priserne på prissiden.
-            <a href="#" class="text-blue-600 underline">Læs mere her.</a>
-          </div>
-        </div>
-
-        <!-- Spørgsmål 2 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer2')"
-          >
-            <span>2. Hvornår er der infomøder?</span>
-            <span id="icon2" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer2" class="hidden pl-4 pb-3 text-gray-700">
-            Vi holder infomøder flere gange om året. Hold øje med vores kalender
-            for næste dato.
-          </div>
-        </div>
-
-        <!-- Spørgsmål 3 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer3')"
-          >
-            <span>3. Går I op i bæredygtighed?</span>
-            <span id="icon3" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer3" class="hidden pl-4 pb-3 text-gray-700">
-            Ja, vi har fokus på bæredygtighed i alt, hvad vi gør, både i
-            undervisning og daglig drift.
-          </div>
-        </div>
+    <div class="faq-item border border-gray-300 rounded-lg p-4 mb-4">
+      <div
+        class="faq-question flex justify-between items-center cursor-pointer"
+        onclick="toggleFAQ(this)"
+      >
+              <h3 cl
+ass="text-lg font-bold">Hvad koster et ophold?</h3>
+        <span class="faq-icon transform transition-transform duration-300"
+          >▼</span
+        >
       </div>
-    </section>
+      <div class="faq-answer mt-4 hidden">
+        <p class="text-gray-700">
+          Priserne på opholdene varierer alt efter hvilken rejse du vælger og
+          hvornår du vil afsted. Tjek priserne på prissiden.
+          <a href="#" class="text-blue-500 underline">Læs mere her.</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function toggleFAQ(element) {
+        console.log("FAQ toggled!"); // Debugging: Bekræft, at funktionen bliver kaldt.
+
+        const faqItem = element.parentElement;
+        const answer = faqItem.querySelector(".faq-answer");
+        const icon = faqItem.querySelector(".faq-icon");
+
+        // Debugging: Kontroller, at elementerne findes
+        console.log("Answer element: ", answer);
+        console.log("Icon element: ", icon);
+
+        // Toggle klassen "hidden" for at vise/skjule svaret
+        if (answer.classList.contains("hidden")) {
+          answer.classList.remove("hidden"); // Vis svaret
+          console.log("Answer shown");
+        } else {
+          answer.classList.add("hidden"); // Skjul svaret
+          console.log("Answer hidden");
+        }
+
+        // Roter ikonet
+        icon.classList.toggle("rotate-180");
+      }
+    </script>
 
     <section class="px-lg">
       <p class="font-inter text-h4_mobil italic lg:text-p_desk py-s">
@@ -217,8 +214,8 @@ import palmer from "../assets/images/palmer.jpg";
       >
         <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
           >"</span
-        > Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk rejse
-        og venner for livet
+        > Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk
+        rejse og venner for livet
       </p>
       <p class="font-inter text-h4_mobil italic lg:text-p_desk pb-m">
         <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
@@ -266,8 +263,8 @@ import palmer from "../assets/images/palmer.jpg";
       >
         <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
           >"</span
-        > Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de dejligste
-        mennesker, og gode rejseledere
+        > Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de
+        dejligste mennesker, og gode rejseledere
       </p>
     </section>
 
@@ -291,9 +288,9 @@ import palmer from "../assets/images/palmer.jpg";
         </h2>
         <p class="font-inter text-p_mobil lg:text-p_desk lg:py-m">
           Drømmer du om et rejseeventyr fyldt med adventure, betagende
-          naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk højskolestemningen
-          til et af vores hyggelige infomøder i København eller Aarhus – eller deltag
-          hjemmefra på et inspirerende online møde.
+          naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk
+          højskolestemningen til et af vores hyggelige infomøder i København
+          eller Aarhus – eller deltag hjemmefra på et inspirerende online møde.
         </p>
 
         <div>
@@ -381,14 +378,14 @@ import palmer from "../assets/images/palmer.jpg";
           Tag på højskole i udlandet og oplev et unikt eventyr med stærkt
           fællesskab og spændende rejseoplevelser. <br /><br />
 
-          Brug dit sabbatår på frivilligt arbejde, adventure, sprog og personlig
+           Brug dit sabbatår på frivilligt arbejde, adventure, sprog og personlig
           udvikling, som giver dig øget selvtillid og selvindsigt. <br /><br />
 
-          Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser
-          med noget på hjerte.” Vi fokuserer på at flytte dine grænser og hjælpe
-          dig med at finde afklaring om din fremtid. <br /><br />
+           Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser med
+          noget på hjerte.” Vi fokuserer på at flytte dine grænser og hjælpe dig
+          med at finde afklaring om din fremtid. <br /><br />
 
-          Tag på højskole i udlandet, hvis du ønsker et eventyr, der inspirerer
+           Tag på højskole i udlandet, hvis du ønsker et eventyr, der inspirerer
           og styrker dig.
         </p>
       </div>
@@ -472,12 +469,12 @@ import palmer from "../assets/images/palmer.jpg";
           højskoleophold i udlandet giver dig nye venskaber og oplevelser for
           livet. <br /><br />
 
-          Vælg mellem rejser til Bali, Hawaii, Maldiverne, Australien, New York,
-          Tokyo, Rio, Indien, Bolivia, Japan, Costa Rica og mange andre
-          spændende steder. Oplev natur, storbyer, kultur og adrenalinfyldte
-          eventyr sammen med andre unge og danske rejseledere. <br /><br />
+           Vælg mellem rejser til Bali, Hawaii, Maldiverne, Australien, New York,
+          Tokyo, Rio, Indien, Bolivia, Japan, Costa Rica og mange andre spændende
+          steder. Oplev natur, storbyer, kultur og adrenalinfyldte eventyr sammen
+          med andre unge og danske rejseledere. <br /><br />
 
-          Højskolerejsen er ikke kun et eventyr i verden, men også en rejse mod
+           Højskolerejsen er ikke kun et eventyr i verden, men også en rejse mod
           personlig udvikling, selvtillid og selvværd.
         </p>
       </div>
@@ -569,10 +566,10 @@ import palmer from "../assets/images/palmer.jpg";
 
       <p class="font-inter text-p_mobil lg:text-p_desk">
         HÖJSKOLENDK tilbyder rejser året rundt – både korte sommerophold på ca.
-        5 uger og længere ophold på 2-3 måneder. <br /><br /> Sommeropholdet er perfekt
-        til dig, der vil opleve flere lande og kulturer på kort tid, mens ophold
-        i løbet af året er ideelt for sabbatårselever, der ønsker personlig udvikling
-        og et eventyr.
+        5 uger og længere ophold på 2-3 måneder. <br /><br />
+         Sommeropholdet er perfekt til dig, der vil opleve flere lande og
+        kulturer på kort tid, mens ophold i løbet af året er ideelt for
+        sabbatårselever, der ønsker personlig udvikling og et eventyr.
       </p>
 
       <p class="font-inter text-p_mobil lg:text-p_desk">
