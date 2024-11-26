@@ -13,48 +13,69 @@ import stemning5 from "../assets/images/stemning5.jpg";
 import stemning6 from "../assets/images/stemning6.jpg";
 import stemning7 from "../assets/images/stemning7.jpg";
 import stemning8 from "../assets/images/stemning8.jpg";
-import stemning9 from "../assets/images/stemning9.png";
-import stemning10 from "../assets/images/stemning10.png";
-import stemning11 from "../assets/images/stemning11.png";
-import stemning12 from "../assets/images/stemning12.png";
+import stemning9 from "../assets/images/stemning9.jpg";
+import stemning10 from "../assets/images/stemning10.jpg";
+import stemning11 from "../assets/images/stemning11.jpg";
+import stemning12 from "../assets/images/stemning12.jpg";
 import infobillede from "../assets/images/infobillede.jpg";
+import storinfobillede from "../assets/images/storinfobillede.jpg";
 import ligeværd from "../assets/images/ligeværd.jpg";
 import integritet from "../assets/images/integritet.jpg";
 import mod from "../assets/images/mod.jpg";
 import fællesskab from "../assets/images/fællesskab.jpg";
 import trustpilot1 from "../assets/images/trustpilot1.jpg";
 import trustpilot2 from "../assets/images/trustpilot2.jpg";
+import trustpilot3 from "../assets/images/trustpilot3.jpg";
+import trustpilot4 from "../assets/images/trustpilot4.jpg";
+import palme from "../assets/images/palme.png";
 ---
 
 <MainLayout title="Titel">
   <article>
     <section id="hero">
-      <h1 class="font-acme text-h1_mobil text-blaa-300">HØJSKOLE I UDLANDET</h1>
-      <h2 class="font-inter text-h2_mobil font-bold text-blaa-300">
+      <h1
+        class="font-acme text-h1_mobil text-blaa-300 lg:text-h1_desk grid justify-items-center"
+      >
+        HØJSKOLE I UDLANDET
+      </h1>
+      <h2
+        class="font-inter text-h2_mobil font-bold text-blaa-300 lg:text-h2_desk grid justify-items-center"
+      >
         EVENTYRLIGE HØJSKOLEOPHOLD I UDLANDET FOR UNGE
       </h2>
     </section>
 
-    <section class="px-lg">
-      <h2 class="font-inter text-h2_mobil font-bold">
-        SKAB MINDER FOR LIVET - <br /> KOM PÅ HØJSKOLEEVENTYR!
+    <section class="px-lg lg:px-2xl pt-m">
+      <h2
+        class="font-inter text-h2_mobil font-bold lg:text-h2_desk pt-lg text-blaa-950 lg:grid lg:justify-items-center"
+      >
+        SKAB MINDER FOR LIVET - KOM PÅ HØJSKOLEEVENTYR!
       </h2>
-      <p class="font-inter text-p_mobil">
-        Tag på højskole i udlandet og oplev verden på en helt ny måde! Hos
-        HÖJSKOLENDK kombinerer vi rejseeventyr, fællesskab og spændende
-        undervisning for unge mellem 18-30 år. Forestil dig fællesskab, nye
-        venner, fantastiske landskaber og spændende kulturer, der sætter spor
-        for livet. Med os er du sikret uforglemmelige oplevelser, stærke
-        venskaber og tryghed hele vejen – vi er medlem af Rejsegarantifonden.
-        Bliv underholdt, udvikl dig og skab minder, der varer for evigt. Vi
-        glæder os til at tage dig med på dit livs rejse!
-      </p>
-      <Image src={solmobile} class="mx-auto pb-xl pt-s" alt="billede af sol" />
+      <div class="lg:grid lg:grid-cols-2 pt-s">
+        <p class="font-inter text-p_mobil lg:text-p_desk text-blaa-950">
+          Tag på højskole i udlandet og oplev verden på en helt ny måde! Hos
+          HÖJSKOLENDK kombinerer vi rejseeventyr, fællesskab og spændende
+          undervisning for unge mellem 18-30 år. Forestil dig fællesskab, nye
+          venner, fantastiske landskaber og spændende kulturer, der sætter spor
+          for livet.
+        </p>
+        <p class="font-inter text-p_mobil lg:text-p_desk text-blaa-950">
+          Med os er du sikret uforglemmelige oplevelser, stærke venskaber og
+          tryghed hele vejen – vi er medlem af Rejsegarantifonden. Bliv
+          underholdt, udvikl dig og skab minder, der varer for evigt. Vi glæder
+          os til at tage dig med på dit livs rejse!
+        </p>
+      </div>
+      <Image
+        src={solmobile}
+        class="mx-auto pb-xl pt-s lg:w-lg"
+        alt="billede af sol"
+      />
     </section>
 
-    <section class="pb-lg px-lg" id="rejser">
+    <section class="pb-lg px-lg lg:px-2xl" id="rejser">
       <h2
-        class="grid justify-items-center pb-8 font-inter text-h2_mobil font-bold"
+        class="grid justify-items-center pb-8 font-inter text-h2_mobil font-bold lg:text-h2_desk"
       >
         VORES REJSER
       </h2>
@@ -130,93 +151,189 @@ import trustpilot2 from "../assets/images/trustpilot2.jpg";
       </div>
     </section>
 
-    <section class="px-lg">
-      <h2 class="font-inter text-h2_mobil font-bold">
-        SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPRØGSMÅL
+    <section class="max-w-4xl mx-auto bg-[#F7F6E7] p-6 rounded-lg">
+      <h2 class="text-xl font-bold mb-6 text-center">
+        SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPØRGSMÅL
       </h2>
+      <div class="space-y-4">
+        <!-- Spørgsmål 1 -->
+        <div class="border-b border-gray-300">
+          <button
+            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
+            onclick="toggleAnswer('answer1')"
+          >
+            <span>1. Hvad koster et højskoleophold?</span>
+            <span id="icon1" class="transform transition-transform">▼</span>
+          </button>
+          <div id="answer1" class="hidden pl-4 pb-3 text-gray-700">
+            Priserne på opholdene varierer alt efter hvilken rejse du vælger og
+            hvornår du vil afsted. Tjek priserne på prissiden.
+            <a href="#" class="text-blue-600 underline">Læs mere her.</a>
+          </div>
+        </div>
+
+        <!-- Spørgsmål 2 -->
+        <div class="border-b border-gray-300">
+          <button
+            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
+            onclick="toggleAnswer('answer2')"
+          >
+            <span>2. Hvornår er der infomøder?</span>
+            <span id="icon2" class="transform transition-transform">▼</span>
+          </button>
+          <div id="answer2" class="hidden pl-4 pb-3 text-gray-700">
+            Vi holder infomøder flere gange om året. Hold øje med vores kalender
+            for næste dato.
+          </div>
+        </div>
+
+        <!-- Spørgsmål 3 -->
+        <div class="border-b border-gray-300">
+          <button
+            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
+            onclick="toggleAnswer('answer3')"
+          >
+            <span>3. Går I op i bæredygtighed?</span>
+            <span id="icon3" class="transform transition-transform">▼</span>
+          </button>
+          <div id="answer3" class="hidden pl-4 pb-3 text-gray-700">
+            Ja, vi har fokus på bæredygtighed i alt, hvad vi gør, både i
+            undervisning og daglig drift.
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="px-lg">
-      <p class="font-inter text-h4_mobil italic">
-        "HöjskolenDK giver en tryg og sikker rejseform"
+      <p class="font-inter text-h4_mobil italic lg:text-p_desk py-s">
+        <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
+          >"</span
+        > HöjskolenDK giver en tryg og sikker rejseform
       </p>
-      <p class="font-inter text-h4_mobil italic">
-        "Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk
-        rejse og venner for livet"
+      <p
+        class="font-inter text-h4_mobil italic lg:text-p_desk flex justify-end"
+      >
+        <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
+          >"</span
+        > Kan anbefale HöjskolenDK til alle, der kunne tænke sig en fantastisk rejse
+        og venner for livet
       </p>
-      <p class="font-inter text-h4_mobil italic">
-        "Helt igennem den bedste beslutning jeg nogensinde har taget"
+      <p class="font-inter text-h4_mobil italic lg:text-p_desk pb-m">
+        <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
+          >"</span
+        > Helt igennem den bedste beslutning jeg nogensinde har taget
       </p>
+      <div
+        class="grid grid-rows-2 justify-items-center lg:grid-cols-2 lg:hidden"
+      >
+        <div class="grid grid-cols-2 gap-xs pb-xs">
+          <Image src={stemning1} class="" alt="billede af stemning" />
+          <Image src={stemning2} class="" alt="billede af stemning" />
+          <Image src={stemning3} class="" alt="billede af stemning" />
+          <Image src={stemning4} class="" alt="billede af stemning" />
+        </div>
 
-      <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 gap-xs">
+          <Image src={stemning5} class="" alt="billede af stemning" />
+          <Image src={stemning6} class="" alt="billede af stemning" />
+          <Image src={stemning7} class="" alt="billede af stemning" />
+          <Image src={stemning8} class="" alt="billede af stemning" />
+        </div>
+      </div>
+
+      <div
+        class="lg:grid lg:grid-cols-4 justify-items-center justify-self-center gap-xs h-full w-auto hidden lg:block"
+      >
         <Image src={stemning1} class="" alt="billede af stemning" />
         <Image src={stemning2} class="" alt="billede af stemning" />
         <Image src={stemning3} class="" alt="billede af stemning" />
         <Image src={stemning4} class="" alt="billede af stemning" />
-      </div>
-
-      <div class="grid grid-cols-2">
         <Image src={stemning5} class="" alt="billede af stemning" />
         <Image src={stemning6} class="" alt="billede af stemning" />
         <Image src={stemning7} class="" alt="billede af stemning" />
         <Image src={stemning8} class="" alt="billede af stemning" />
       </div>
 
-      <p class="font-inter text-h4_mobil italic">
-        "HöjskolenDK har givet mig så meget mere end blot en rejse"
+      <p class="font-inter text-h4_mobil italic lg:text-p_desk pb-s pt-m">
+        <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
+          >"</span
+        > HöjskolenDK har givet mig så meget mere end blot en rejse
       </p>
-      <p class="font-inter text-h4_mobil italic">
-        "Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de
-        dejligste mennesker, og gode rejseledere.""
+      <p
+        class="font-inter text-h4_mobil italic lg:text-p_desk flex justify-end pb-lg"
+      >
+        <span class="font-bold text-orange-500 text-h4_desk lg:text-h2_desk"
+          >"</span
+        > Så god beslutning! Uden tvivl en helt fantastisk rejse, fyldt med de dejligste
+        mennesker, og gode rejseledere
       </p>
     </section>
 
-    <section class="bg-blaa-200 px-lg py-m">
-      <Image src={infobillede} class="mx-auto" alt="billede af stemning" />
-      <h2 class="font-inter text-h2_mobil text-blaa-900 font-bold pt-m">
-        INFOMØDER
-      </h2>
-      <p class="font-inter text-p_mobil">
-        Drømmer du om et rejseeventyr fyldt med adventure, betagende
-        naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk højskolestemningen
-        til et af vores hyggelige infomøder i København eller Aarhus – eller deltag
-        hjemmefra på et inspirerende online møde.
-      </p>
+    <section class="bg-blaa-200 lg:grid lg:grid-cols-2">
+      <Image
+        src={infobillede}
+        class="block lg:hidden"
+        alt="billede af stemning"
+      />
+      <Image
+        src={storinfobillede}
+        class="hidden lg:block"
+        alt="billede af stemning"
+      />
 
       <div>
-        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
-          KØBENHAVN
-        </h4>
-
-        <p class="font-inter text-p_mobil italic">
-          16. Januar 2025 - kl. 17-19
+        <h2
+          class="font-inter text-h2_mobil text-blaa-900 font-bold pt-m lg:text-h2_desk"
+        >
+          INFOMØDER
+        </h2>
+        <p class="font-inter text-p_mobil lg:text-p_desk lg:py-m">
+          Drømmer du om et rejseeventyr fyldt med adventure, betagende
+          naturoplevelser og unikke kulturmøder? <br /><br /> Så kom og mærk højskolestemningen
+          til et af vores hyggelige infomøder i København eller Aarhus – eller deltag
+          hjemmefra på et inspirerende online møde.
         </p>
+
+        <div>
+          <h4
+            class="font-inter text-h4_mobil font-bold text-orange-500 lg:text-h4_desk"
+          >
+            KØBENHAVN
+          </h4>
+
+          <p class="font-inter text-p_mobil italic lg:text-p_desk lg:pb-m">
+            16. Januar 2025 - kl. 17-19
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="font-inter text-h4_mobil font-bold text-orange-500 lg:text-h4_desk"
+          >
+            ÅRHUS
+          </h4>
+
+          <p class="font-inter text-p_mobil italic lg:text-p_desk lg:pb-m">
+            14. Januar 2025 - kl. 17-19
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="font-inter text-h4_mobil font-bold text-orange-500 lg:text-h4_desk"
+          >
+            ONLINE INFORMØDE
+          </h4>
+
+          <p class="font-inter text-p_mobil italic lg:text-p_desk">
+            13. November 2024 - kl. 17-19
+          </p>
+          <p class="font-inter text-p_mobil italic lg:text-p_desk">
+            21. Januar 2025 - kl. 17-19
+          </p>
+        </div>
+        <div class="py-m">KNAP</div>
       </div>
-
-      <div>
-        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
-          ÅRHUS
-        </h4>
-
-        <p class="font-inter text-p_mobil italic">
-          14. Januar 2025 - kl. 17-19
-        </p>
-      </div>
-
-      <div>
-        <h4 class="font-inter text-h4_mobil font-bold text-orange-500">
-          ONLINE INFORMØDE
-        </h4>
-
-        <p class="font-inter text-p_mobil italic">
-          13. November 2024 - kl. 17-19
-        </p>
-        <p class="font-inter text-p_mobil italic">
-          21. Januar 2025 - kl. 17-19
-        </p>
-      </div>
-
-      knap
     </section>
 
     <section class="px-lg py-lg">
@@ -248,68 +365,96 @@ import trustpilot2 from "../assets/images/trustpilot2.jpg";
       </div>
     </section>
 
-    <section class="p-lg bg-orange-300">
-      <h2 class="font-inter font-bold text-gron-950 text-h2_mobil pb-s">
-        REJSE HØJSKOLE
-      </h2>
-      <p class="font-inter text-p_mobil pb-lg">
-        Tag på højskole i udlandet og oplev et unikt eventyr med stærkt
-        fællesskab og spændende rejseoplevelser. <br /><br />
+    <section
+      class="p-lg px-2xl bg-orange-300 lg:grid lg:grid-cols-2 lg:gap-2xl"
+    >
+      <div class="">
+        <h2
+          class="font-inter font-bold text-gron-950 text-h2_mobil pb-s lg:text-h2_desk"
+        >
+          REJSE HØJSKOLE
+        </h2>
 
-        Brug dit sabbatår på frivilligt arbejde, adventure, sprog og personlig
-        udvikling, som giver dig øget selvtillid og selvindsigt. <br /><br />
+        <p class="font-inter text-p_mobil pb-lg lg:text-p_desk">
+          Tag på højskole i udlandet og oplev et unikt eventyr med stærkt
+          fællesskab og spændende rejseoplevelser. <br /><br />
 
-        Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser med
-        noget på hjerte.” Vi fokuserer på at flytte dine grænser og hjælpe dig
-        med at finde afklaring om din fremtid. <br /><br />
+          Brug dit sabbatår på frivilligt arbejde, adventure, sprog og personlig
+          udvikling, som giver dig øget selvtillid og selvindsigt. <br /><br />
 
-        Tag på højskole i udlandet, hvis du ønsker et eventyr, der inspirerer og
-        styrker dig.
-      </p>
+          Vores elever beskriver HÖJSKOLENDK som ”eventyrlige dannelsesrejser
+          med noget på hjerte.” Vi fokuserer på at flytte dine grænser og hjælpe
+          dig med at finde afklaring om din fremtid. <br /><br />
 
-      <h2 class="font-inter font-bold text-gron-950 text-h2_mobil pb-s">
-        HØJSKOLE I UDLANDET
-      </h2>
-      <p class="font-inter text-p_mobil pb-s">
-        Når du rejser med HÖJSKOLENDK, får du:
-      </p>
+          Tag på højskole i udlandet, hvis du ønsker et eventyr, der inspirerer
+          og styrker dig.
+        </p>
+      </div>
+      <div class="">
+        <h2
+          class="font-inter font-bold text-gron-950 text-h2_mobil pb-s lg:text-h2_desk"
+        >
+          HØJSKOLE I UDLANDET
+        </h2>
+        <p class="font-inter text-p_mobil pb-s lg:text-p_desk font-semibold">
+          Når du rejser med HÖJSKOLENDK, får du:
+        </p>
 
-      <ul class="font-inter text-p_mobil pb-s">
-        <li>Et stærkt fællesskab og masser af naturoplevelser</li>
-        <li>Nye, spændende kulturer og adventure</li>
-        <li>Øget selvtillid og personlig udvikling</li>
-        <li>Passionerede rejseledere og undervisere</li>
-        <li>Et unikt, trygt rejseeventyr</li>
-      </ul>
+        <ul class="font-inter text-p_mobil pb-s lg:text-p_desk">
+          <li>Et stærkt fællesskab og masser af naturoplevelser</li>
+          <li>Nye, spændende kulturer og adventure</li>
+          <li>Øget selvtillid og personlig udvikling</li>
+          <li>Passionerede rejseledere og undervisere</li>
+          <li>Et unikt, trygt rejseeventyr</li>
+        </ul>
 
-      <p class="font-inter text-p_mobil pb-s">
-        Vores kombination af højskole, rejseeventyr og spændende undervisning
-        hjælper dig med at finde ud af, hvad der er meningsfuldt for dig – så du
-        kan forfølge dine drømme.
-      </p>
+        <p class="font-inter text-p_mobil pb-s lg:text-p_desk">
+          Vores kombination af højskole, rejseeventyr og spændende undervisning
+          hjælper dig med at finde ud af, hvad der er meningsfuldt for dig – så
+          du kan forfølge dine drømme.
+        </p>
 
-      <p class="font-inter font-bold text-p_mobil">
-        Opdag dit livs eventyr med HÖJSKOLENDK!
-      </p>
+        <p class="font-inter font-bold text-p_mobil lg:text-p_desk italic">
+          Opdag dit livs eventyr med HÖJSKOLENDK!
+        </p>
+      </div>
+
+      <Image
+        src={palme}
+        alt="billede af palme"
+        class="block mx-auto max-w-full"
+      />
     </section>
 
     <section class="px-lg pb-lg">
       <h2
-        class="font-inter font-bold text-h2_mobil grid justify-items-center pt-xl pb-s"
+        class="font-inter font-bold text-h2_mobil grid justify-items-center pt-xl pb-s lg:text-h2_desk"
       >
         TRUSTPILOT
       </h2>
 
-      <Image
-        src={trustpilot1}
-        class="mx-auto pb-m"
-        alt="billede af trustpilotanmeldelse"
-      />
-      <Image
-        src={trustpilot2}
-        class="mx-auto"
-        alt="billede af trustpilotanmeldelse"
-      />
+      <div class="lg:grid lg:grid-cols-4">
+        <Image
+          src={trustpilot1}
+          class="mx-auto pb-m"
+          alt="billede af trustpilotanmeldelse"
+        />
+        <Image
+          src={trustpilot2}
+          class="mx-auto"
+          alt="billede af trustpilotanmeldelse"
+        />
+        <Image
+          src={trustpilot3}
+          class="mx-auto hidden lg:block"
+          alt="billede af trustpilotanmeldelse"
+        />
+        <Image
+          src={trustpilot4}
+          class="mx-auto hidden lg:block"
+          alt="billede af trustpilotanmeldelse"
+        />
+      </div>
     </section>
 
     <section class="bg-gron-600 px-lg pb-lg">
@@ -413,4 +558,31 @@ import trustpilot2 from "../assets/images/trustpilot2.jpg";
       </p>
     </section>
   </article>
+
+  <script>
+    function toggleAnswer(answerId) {
+      // Find det tilhørende svar og ikon
+      const answer = document.getElementById(answerId);
+      const icon = document.querySelector(`#icon${answerId.slice(-1)}`);
+
+      // Tjek om svaret allerede er synligt
+      if (answer.classList.contains("hidden")) {
+        // Skjul alle andre svar
+        document
+          .querySelectorAll(".hidden")
+          .forEach((el) => el.classList.add("hidden"));
+        document.querySelectorAll(".transform").forEach((el) => {
+          el.style.transform = "rotate(0deg)";
+        });
+
+        // Vis det valgte svar
+        answer.classList.remove("hidden");
+        icon.style.transform = "rotate(180deg)";
+      } else {
+        // Skjul det aktuelle svar
+        answer.classList.add("hidden");
+        icon.style.transform = "rotate(0deg)";
+      }
+    }
+  </script>
 </MainLayout>

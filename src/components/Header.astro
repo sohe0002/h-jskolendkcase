@@ -1,59 +1,19 @@
 ---
-import { Image } from "astro:assets";
 import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
+import Button from "./Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-farve2">
-  <div id="navbar" class="flex flex-row justify-between py-5 px-2 z-1000">
-    <div id="logo" class="text-baggrund montserrat">
-      <a href="/">
-        <Image src={logo} class="" alt="billede af logo" />
-      </a>
-    </div>
-    <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4 text-baggrund montserrat">
-        <li class=""><Link href="#hero_unit">Københavnerbilleder</Link></li>
-        <li class=""><Link href="#kapitlerne">Bogens indhold</Link></li>
-        <li class=""><Link href="#forfatteren">Forfatteren</Link></li>
-        <li class=""><Link href="#koeb_bogen">Køb nu</Link></li>
-      </ul>
-    </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      ><svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        class="size-5 fill-farve3"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-          clip-rule="evenodd"></path>
-      </svg>
-    </button>
-  </div>
-  <nav
-    id="mobilmenu"
-    class="flex flex-col content-center pt-4"
-    x-show="showmenu"
-    x-transition
-    x-on:click="showmenu = false"
-    x-on:click.outside="showmenu = false"
-  >
-    <ul class="montserrat">
-      <li class="text-center text-baggrund py-2">
-        <Link href="#hero_unit">Københavnerbilleder</Link>
-      </li>
-      <li class="text-center text-baggrund py-2">
-        <Link href="#kapitlerne">Bogens indhold</Link>
-      </li>
-      <li class="text-center text-baggrund py-2">
-        <Link href="#forfatteren">Forfatteren</Link>
-      </li>
-      <li class="text-center text-baggrund py-2">
-        <Link href="#koeb_bogen">Køb nu</Link>
-      </li>
+<section class="bg-gron-200 flex place-content-between p-s self-center">
+  <a href="/"> <Image src={logo} alt="" class="w-[150px]" /></a>
+
+  <nav id="desktopmenu" class="">
+    <ul class="flex gap-6 text-orange-500 font-inter gap-xs">
+      <li><Link href="/cocktail_index">INFOMØDE</Link></li>
+      <li><Link href="/cocktail_kursus">REJSER</Link></li>
+      <li><Link href="/kontakt">PRISER</Link></li>
+      <li><Link href="/kontakt">TILMELD</Link></li>
     </ul>
   </nav>
-</div>
+</section>
