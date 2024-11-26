@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import "motion";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
@@ -153,54 +154,210 @@ import palmer from "../assets/images/palmer.jpg";
       </div>
     </section>
 
-    <section class="max-w-4xl mx-auto bg-[#F7F6E7] p-6 rounded-lg">
-      <h2 class="text-xl font-bold mb-6 text-center">
-        SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPØRGSMÅL
-      </h2>
-      <div class="space-y-4">
-        <!-- Spørgsmål 1 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer1')"
-          >
-            <span>1. Hvad koster et højskoleophold?</span>
-            <span id="icon1" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer1" class="hidden pl-4 pb-3 text-gray-700">
-            Priserne på opholdene varierer alt efter hvilken rejse du vælger og
-            hvornår du vil afsted. Tjek priserne på prissiden.
-            <a href="#" class="text-blue-600 underline">Læs mere her.</a>
+    <section class="relative w-full px-xs pt-m bg-gron-600 text-blaa-950">
+      <div class="mx-auto px-5">
+        <div class="">
+          <h2 class="my-s text-h2_mobil md:text-xl">
+            SPØRGSMÅL OG SVAR TIL OFTE STILLEDE SPØRGSMÅL
+          </h2>
+        </div>
+        <div class="mt-s">
+          <!-- FAQ Item 1 -->
+          <div class="py-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>HVAD KOSTER ET HØJSKOLEOPHOLD?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Priserne på opholdene varierer alt efter hvilken rejse du vælger
+                og hvornår du vil afsted. Tjek priserne på prissiden. Læs mere
+                her.
+              </p>
+            </details>
           </div>
         </div>
 
-        <!-- Spørgsmål 2 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer2')"
-          >
-            <span>2. Hvornår er der infomøder?</span>
-            <span id="icon2" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer2" class="hidden pl-4 pb-3 text-gray-700">
-            Vi holder infomøder flere gange om året. Hold øje med vores kalender
-            for næste dato.
+        <div class="mt-s">
+          <!-- FAQ Item 2 -->
+          <div class="pt-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>HVORNÅR ER DER INFOMØDER?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Deltag i vores infomøder i København, Aarhus eller online. Vi
+                fortæller om højskolelivet, undervisning, aktiviteter, praktisk
+                info og meget mere. Slut af med at møde tidligere elever og
+                rejseledere til vores ’Rejsefeber Café’. København:
+                Studenterhuset, Købmagergade 52  Aarhus: LYNfabrikken,
+                Vestergade 49B Vi glæder os til at møde dig!
+              </p>
+            </details>
           </div>
         </div>
 
-        <!-- Spørgsmål 3 -->
-        <div class="border-b border-gray-300">
-          <button
-            class="w-full flex justify-between items-center text-left text-lg font-semibold py-3"
-            onclick="toggleAnswer('answer3')"
-          >
-            <span>3. Går I op i bæredygtighed?</span>
-            <span id="icon3" class="transform transition-transform">▼</span>
-          </button>
-          <div id="answer3" class="hidden pl-4 pb-3 text-gray-700">
-            Ja, vi har fokus på bæredygtighed i alt, hvad vi gør, både i
-            undervisning og daglig drift.
+        <div class="mt-s">
+          <!-- FAQ Item 3 -->
+          <div class="py-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>GÅR I OP I BÆREDYGTIGHED?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Hos HÖJSKOLENDK skaber vi eventyrlige og bæredygtige
+                højskoleophold med fokus på miljøansvar. Vi planter 50 træer pr.
+                elev, kompenserer for vores CO2-aftryk, beskytter regnskov og
+                stiller krav om dyrevelfærd og ansvarlig turisme.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <div class="mt-s">
+          <!-- FAQ Item 4-->
+          <div class="py-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>KAN MAN TAGE AFSTED UD AT KENDE NOGLE?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Ja, du kan sagtens tage afsted uden at kende nogen. Langt de
+                fleste rejser ”alene” og møder først de andre på afrejsemødet.
+                Alle er i samme båd, og det skaber åbenhed, nysgerrighed og
+                hurtigt nye venskaber. På vores rejser er fællesskabet i fokus,
+                og vi tager ansvar for, at alle trives og får deres livs
+                rejseeventyr. Det er ikke bare en grupperejse – det er et
+                højskoleophold med stærke fællesskabsbånd og unikke oplevelser.
+              </p>
+            </details>
+          </div>
+        </div>
+        <div class="mt-s">
+          <!-- FAQ Item 5-->
+          <div class="py-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>ER DER MEGET FRITID?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Friugerne er en populær del af vores højskoleophold. Efter et
+                spændende undervisningsforløb bruger eleverne dem til alt fra
+                rejser til hygge. Nogle rejser ud med nye venner og udforsker
+                området, mens andre bliver på højskolen. Den sidste friuge
+                bruges ofte på fællesskab, hvor der hygges, festes og deles
+                minder. Et Award-show med kåringer er et højdepunkt, inden turen
+                går hjem til Danmark. Friugerne skaber balance og styrker
+                fællesskabet.
+              </p>
+            </details>
+          </div>
+        </div>
+        <div class="mt-s">
+          <!-- FAQ Item 6-->
+          <div class="py-xs">
+            <details class="group">
+              <summary
+                class="flex items-center justify-between cursor-pointer text-h3_mobil"
+              >
+                <span>HVAD GØR I FOR AT SKABE ET GODT FÆLLESSKAB?</span>
+                <span class="transition group-open:rotate-180">
+                  <svg
+                    fill="none"
+                    height="24"
+                    width="24"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </summary>
+
+              <p
+                class="group-open:animate-fadeIn mt-s text-blaa-950 text-p_mobil"
+              >
+                Fællesskabet hos HÖJSKOLENDK skabes gennem inspirerende
+                undervisning, teambuilding og unikke oplevelser. Eleverne
+                udvikler dybe venskaber, styrker relationer og udforsker både
+                destinationer og sig selv på en måde, der ikke opnås ved at
+                rejse alene.
+              </p>
+            </details>
           </div>
         </div>
       </div>
@@ -587,30 +744,5 @@ import palmer from "../assets/images/palmer.jpg";
     </section>
   </article>
 
-  <script>
-    function toggleAnswer(answerId) {
-      // Find det tilhørende svar og ikon
-      const answer = document.getElementById(answerId);
-      const icon = document.querySelector(`#icon${answerId.slice(-1)}`);
-
-      // Tjek om svaret allerede er synligt
-      if (answer.classList.contains("hidden")) {
-        // Skjul alle andre svar
-        document
-          .querySelectorAll(".hidden")
-          .forEach((el) => el.classList.add("hidden"));
-        document.querySelectorAll(".transform").forEach((el) => {
-          el.style.transform = "rotate(0deg)";
-        });
-
-        // Vis det valgte svar
-        answer.classList.remove("hidden");
-        icon.style.transform = "rotate(180deg)";
-      } else {
-        // Skjul det aktuelle svar
-        answer.classList.add("hidden");
-        icon.style.transform = "rotate(0deg)";
-      }
-    }
-  </script>
+  <script></script>
 </MainLayout>
